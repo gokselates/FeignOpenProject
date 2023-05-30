@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component
 @Component
 class CustomerTask(private val customerAPI: CustomerAPI) {
 
-    @Scheduled(cron="0 * * * * *")
+    @Scheduled(cron="*/5 * * * * *")
     fun getCustomerStatus(): String{
         return customerAPI.getCustomerStatus()
     }
